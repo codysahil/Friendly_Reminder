@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Friendly Reminder",
+  "version": "1.0",
+  "description": "Remind people to study and not to waste time in surfing useless things",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://practice.geeksforgeeks.org/explore?page=2&category[]=Recursion&difficulty[]=0&sortBy=submissions","https://www.instagram.com/","https://twitter.com/home","https://in.pinterest.com/"],
+      "js": ["contentScript.js"],
+      "css": ["contentScript.css"]
+    }
+  ]
+}
